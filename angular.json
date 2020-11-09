@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sfui-demo"
+    }
+  },
+  "defaultProject": "sfui-demo",
+  "cli": {
+    "analytics": false
+  }
 }
