@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SfuiWebComponents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap">
+    <style>
+        * {
+            font-family: "IBM Plex Sans", sans-serif;
+        }
+
+        .title {
+            line-height: 20px;
+        }
+
+        .buttons {
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        body > div {
+            margin-bottom: 10px;
+        }
+
+        .blocks {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div style="display: flex; gap: 10px">
+    <sfui-form-field style="width:180px; display: block">
+        <sfui-label>Label</sfui-label>
+        <input sfui-input placeholder="example">
+    </sfui-form-field>
+
+    <sfui-form-field style="width:180px; display: block">
+        <sfui-label>Label</sfui-label>
+        <input sfui-input placeholder="example" disabled>
+    </sfui-form-field>
+
+    <sfui-form-field style="width:180px; display: block">
+        <sfui-label>Prefix</sfui-label>
+        <sfui-icon name="search" sfui-prefix></sfui-icon>
+        <input sfui-input placeholder="example">
+    </sfui-form-field>
+
+    <sfui-form-field style="width:180px; display: block">
+        <sfui-label>Suffix</sfui-label>
+        <input sfui-input placeholder="example">
+        <sfui-icon name="close" sfui-suffix></sfui-icon>
+    </sfui-form-field>
+    <sfui-form-field style="width:180px; display: block">
+        <sfui-label>Prefix & suffix</sfui-label>
+        <sfui-icon name="search" sfui-prefix></sfui-icon>
+        <input sfui-input placeholder="example">
+        <sfui-icon name="close" sfui-suffix></sfui-icon>
+    </sfui-form-field>
+</div>
+<div style="width: 400px">
+    <sfui-label>Select</sfui-label>
+    <sfui-select>
+        <sfui-option value="my value 1">My option 1</sfui-option>
+        <sfui-option value="my value 2">My option 2</sfui-option>
+    </sfui-select>
+</div>
+<div style="width: 400px">
+    <sfui-label>Select</sfui-label>
+    <sfui-select disabled>
+        <sfui-option value="my value 3">My option 3</sfui-option>
+        <sfui-option value="my value 4">My option 4</sfui-option>
+    </sfui-select>
+</div>
+
+<div class="title">button[sfui-button]</div>
+<div class="buttons">
+    <button sfui-button sfui-style="primary">primary</button>
+    <button sfui-button sfui-style="primary" disabled>Disabled</button>
+    <button sfui-button sfui-style="secondary">secondary</button>
+    <button sfui-button sfui-style="secondary" disabled>Disabled</button>
+</div>
+<div class="title">a[sfui-button]</div>
+<div class="buttons">
+    <a sfui-button sfui-style="primary">primary</a>
+    <a sfui-button sfui-style="primary" disabled>Disabled</a>
+    <a sfui-button sfui-style="secondary">secondary</a>
+    <a sfui-button sfui-style="secondary" disabled>Disabled</a>
+</div>
+<div class="title">button[sfui-view-button] > sfui-icon</div>
+<div class="buttons">
+    <button sfui-view-button selected="true">
+        <sfui-icon name="box"></sfui-icon>
+        Product
+    </button>
+    <button sfui-view-button>
+        <sfui-icon name="boxes"></sfui-icon>
+        Category
+    </button>
+    <button sfui-view-button>
+        <sfui-icon name="warning"></sfui-icon>
+        Errors
+    </button>
+    <button sfui-view-button>
+        <sfui-icon name="thumbtack"></sfui-icon>
+        Normal
+    </button>
+</div>
+<div class="title">a[sfui-view-button] > sfui-icon</div>
+<div class="buttons">
+    <a sfui-view-button>
+        <sfui-icon name="box"></sfui-icon>
+        Product
+    </a>
+    <a sfui-view-button selected="true">
+        <sfui-icon name="boxes"></sfui-icon>
+        Category
+    </a>
+    <a sfui-view-button>
+        <sfui-icon name="warning"></sfui-icon>
+        Errors
+    </a>
+    <a sfui-view-button>
+        <sfui-icon name="thumbtack"></sfui-icon>
+        Normal
+    </a>
+</div>
+<div class="title">button[sfui-view-button] > sfui-icon</div>
+<div class="buttons">
+    <button sfui-view-button>
+        <sfui-icon name="box"></sfui-icon>
+        Product
+    </button>
+    <button sfui-view-button>
+        <sfui-icon name="boxes"></sfui-icon>
+        Category
+    </button>
+    <button sfui-view-button selected="true">
+        <sfui-icon name="warning"></sfui-icon>
+        Errors
+    </button>
+    <button sfui-view-button>
+        <sfui-icon name="thumbtack"></sfui-icon>
+        Normal
+    </button>
+</div>
+<div class="title">button[sfui-view-button] > sfui-icon</div>
+<div class="buttons">
+    <button sfui-view-button>
+        <sfui-icon name="box"></sfui-icon>
+        Product
+    </button>
+    <button sfui-view-button>
+        <sfui-icon name="boxes"></sfui-icon>
+        Category
+    </button>
+    <button sfui-view-button>
+        <sfui-icon name="warning"></sfui-icon>
+        Errors
+    </button>
+    <button sfui-view-button selected="true">
+        <sfui-icon name="thumbtack"></sfui-icon>
+        Normal
+    </button>
+</div>
+<div class="title">
+    button[sfui-icon-button], a[sfui-icon-button]
+</div>
+<div class="buttons">
+    <button sfui-icon-button>
+        <sfui-icon name="info"></sfui-icon>
+    </button>
+    <a sfui-icon-button>
+        <sfui-icon name="info"></sfui-icon>
+    </a>
+    <button sfui-icon-button disabled>
+        <sfui-icon name="info"></sfui-icon>
+    </button>
+
+    <button sfui-icon-button>
+        <sfui-icon name="dashboard"></sfui-icon>
+    </button>
+    <a sfui-icon-button>
+        <sfui-icon name="dashboard"></sfui-icon>
+    </a>
+    <button sfui-icon-button disabled>
+        <sfui-icon name="dashboard"></sfui-icon>
+    </button>
+
+    <button sfui-icon-button>
+        <sfui-icon name="arrowDown"></sfui-icon>
+    </button>
+    <a sfui-icon-button>
+        <sfui-icon name="arrowDown"></sfui-icon>
+    </a>
+    <button sfui-icon-button disabled>
+        <sfui-icon name="arrowDown"></sfui-icon>
+    </button>
+</div>
+<div class="title">sfui-checkbox</div>
+<div class="buttons">
+    <sfui-checkbox>Unchecked</sfui-checkbox>
+    <sfui-checkbox checked="true">Checked</sfui-checkbox>
+    <sfui-checkbox disabled>Disabled</sfui-checkbox>
+    <sfui-checkbox indeterminate="true">Indeterminate</sfui-checkbox>
+</div>
+<div class="title">[sfui-tag-red],[sfui-tag-orange],[sfui-tag-grey],[sfui-tag-green]</div>
+<div class="buttons">
+    <div sfui-tag sfui-tag-red>Mapping missing</div>
+    <div sfui-tag sfui-tag-orange>Detail missing</div>
+    <div sfui-tag sfui-tag-grey>Complete</div>
+    <div sfui-tag sfui-tag-green>Connected</div>
+</div>
+<div class="blocks" style="width: 400px">
+    <div class="title">sfui-banner-success</div>
+    <sfui-banner-success>
+        <div style="display: flex; align-items: center">
+            <div style="flex: 1">All values have been assigned</div>
+            <a href="#">Show all</a>
+        </div>
+    </sfui-banner-success>
+    <div class="title">sfui-banner-error</div>
+    <sfui-banner-error>
+        <div sfui-title>Unable to connect</div>
+        <div>Your Seller ID and/or your Token are not matching. Aenean lacinia bibendum nulla sed consectetur.</div>
+    </sfui-banner-error>
+    <div class="title">sfui-banner-warning</div>
+    <sfui-banner-warning>
+        <div style="display: flex; align-items: center">
+            <div style="flex: 1">Show only the 3 unmatched values</div>
+            <sfui-icon name="arrowRight"></sfui-icon>
+        </div>
+    </sfui-banner-warning>
+    <div class="title">sfui-banner-info</div>
+    <sfui-banner-info>
+        <div sfui-title>Map your category on the fluid view “Category”</div>
+        <div>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis.
+        </div>
+    </sfui-banner-info>
+</div>
+<div>
+    <div class="title">[sfui-card]</div>
+    <div sfui-card style="width: 400px">
+        <div sfui-card-title>Matching sizes</div>
+        <div>This category doesn’t have a matching category on Cdiscount catalog. Etiam porta sem malesuada magna mollis
+            euismod.
+        </div>
+    </div>
+</div>
+<script src="sfui.js"></script>
+</body>
+</html>
