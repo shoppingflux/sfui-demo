@@ -11,7 +11,6 @@
     <style>
         * {
             font-family: "IBM Plex Sans", sans-serif;
-            X
         }
 
         .title {
@@ -45,13 +44,13 @@
 <body>
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
     <div class="mdl-tabs__tab-bar">
-        <a href="#buttons" class="mdl-tabs__tab is-active">Buttons</a>
+        <a href="#buttons" class="mdl-tabs__tab">Buttons</a>
         <a href="#form-elements" class="mdl-tabs__tab">Form elements</a>
         <a href="#typography" class="mdl-tabs__tab">Typography</a>
-        <a href="#other" class="mdl-tabs__tab">Other components</a>
+        <a href="#other" class="mdl-tabs__tab is-active">Other components</a>
     </div>
 
-    <div class="mdl-tabs__panel is-active" id="buttons">
+    <div class="mdl-tabs__panel" id="buttons">
         <div class="title">button[sfui-button]</div>
         <div class="buttons">
             <button sfui-button sfui-style="primary">primary</button>
@@ -252,9 +251,21 @@
             <a href="#" class="sfui-link-small">Link small</a>
         </div>
     </div>
-    <div class="mdl-tabs__panel" id="other">
+    <div class="mdl-tabs__panel is-active" id="other">
+        <div class="title">sfui-expandable</div>
+        <div class="buttons" style="width: 220px; background: #06284B; padding: 0 10px;">
+            <sfui-expandable>
+
+                <div sfui-trigger>
+                    <sfui-icon name="orders"></sfui-icon>
+                    <span class="sfui-label-medium">Orders</span>
+                </div>
+                <div sfui-expandable-item>Overview</div>
+                <div sfui-expandable-item>Reporting</div>
 
 
+            </sfui-expandable>
+        </div>
         <div class="title">[sfui-tag-red],[sfui-tag-orange],[sfui-tag-grey],[sfui-tag-green]</div>
         <div class="buttons">
             <div sfui-tag sfui-tag-red>Mapping missing</div>
@@ -264,32 +275,32 @@
         </div>
         <div class="blocks" style="width: 400px">
             <div class="title">sfui-banner-success</div>
-            <sfui-banner-success>
-                <div style="display: flex; align-items: center">
+            <sfui-banner type="success">
+                <div sfui-title style="display: flex; align-items: center">
                     <div style="flex: 1">All values have been assigned</div>
-                    <a href="#">Show all</a>
+                    <a href="#" class="sfui-link-medium">Show all</a>
                 </div>
-            </sfui-banner-success>
+            </sfui-banner>
             <div class="title">sfui-banner-error</div>
-            <sfui-banner-error>
+            <sfui-banner type="error">
                 <div sfui-title>Unable to connect</div>
                 <div>Your Seller ID and/or your Token are not matching. Aenean lacinia bibendum nulla sed consectetur.
                 </div>
-            </sfui-banner-error>
+            </sfui-banner>
             <div class="title">sfui-banner-warning</div>
-            <sfui-banner-warning>
-                <div style="display: flex; align-items: center">
+            <sfui-banner type="warning">
+                <div sfui-title style="display: flex; align-items: center">
                     <div style="flex: 1">Show only the 3 unmatched values</div>
                     <sfui-icon name="arrowRight"></sfui-icon>
                 </div>
-            </sfui-banner-warning>
+            </sfui-banner>
             <div class="title">sfui-banner-info</div>
-            <sfui-banner-info>
+            <sfui-banner type="info">
                 <div sfui-title>Map your category on the fluid view “Category”</div>
                 <div>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at
                     lobortis.
                 </div>
-            </sfui-banner-info>
+            </sfui-banner>
         </div>
         <div>
             <div class="title">[sfui-card]</div>
@@ -306,6 +317,5 @@
 
 
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<script src="sfui.js" defer></script>
-</body>
+<script src="sfui.js" defer></script></body>
 </html>
